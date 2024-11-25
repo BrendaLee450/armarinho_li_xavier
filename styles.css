@@ -12,8 +12,8 @@ body {
 }
 
 .logo-container .logo {
-    max-width: 800px; /* Aumente o tamanho da logo */
-    height: auto;
+    max-width: 100%; /* Ajuste a largura máxima para 100% */
+    height: auto; /* Ajuste a altura para auto */
     display: block;
     margin: 0 auto;
 }
@@ -28,7 +28,11 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex; /* Use flexbox para alinhar os itens em linha */
+    justify-content: center; /* Centralize os itens */
+    flex-wrap: wrap; /* Permita que os itens quebrem linha se necessário */
 }
+
 
 nav ul li {
     display: inline;
