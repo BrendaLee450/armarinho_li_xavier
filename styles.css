@@ -1,0 +1,265 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.logo-container {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #6f30e8; /* Mesma cor do cabeçalho */
+}
+
+.logo-container .logo {
+    max-width: 800px; /* Aumente o tamanho da logo */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #6f30e8;
+    color: white;
+    padding: 0.5em 0; /* Diminua o padding para diminuir a altura do cabeçalho */
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em; /* Aumente o tamanho da fonte do cabeçalho */
+}
+
+nav ul li a:hover {
+    color: #e300ff;
+    text-decoration: none; /* Remova o sublinhado ao passar o mouse */
+}
+
+section {
+    padding: 2em 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 1em;
+    padding: 1em 0;
+    flex: 1;
+}
+
+.card-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+    margin: 1em; /* Adicione margem para espaçamento */
+}
+
+.card img {
+    max-width: 100%;
+    height: 200px; /* Defina uma altura fixa para todas as imagens */
+    object-fit: cover; /* Garanta que a imagem se ajuste ao contêiner */
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-color: #e300ff;
+}
+
+.carousel-button {
+    background-color: transparent;
+    color: #e300ff;
+    border: none; /* Remova a borda */
+    padding: 0.5em;
+    cursor: pointer;
+    z-index: 1;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em; /* Aumente o tamanho da seta */
+}
+
+.carousel-button:focus {
+    outline: none; /* Remova o outline */
+    border: 2px solid #e300ff; /* Adicione a borda da mesma cor da seta */
+}
+
+.carousel-button:active {
+    color: #e300ff; /* Mantenha a cor ao clicar */
+}
+
+.carousel-button.prev {
+    left: -60px; /* Ajuste a posição para fora da área do card */
+}
+
+.carousel-button.next {
+    right: -60px; /* Ajuste a posição para fora da área do card */
+}
+
+h1, h2, h3 {
+    text-align: center;
+    font-family: 'Shantell Sans', serif;
+    color: #6f30e8;
+}
+
+.card-title {
+    color: #6f30e8;
+}
+
+.card-text {
+    color: #666;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+.contact-icon {
+    font-size: 24px;
+    vertical-align: middle;
+    margin-right: 0.5em;
+    color: #e300ff; /* Cor dos ícones igual ao fundo dos avisos */
+}
+
+/* Estilização do rodapé */
+footer {
+    background-color: #6f30e8;/* Cor de fundo do rodapé */
+    color: white;
+    text-align: center;
+    padding: 1em 0; /* Diminua o padding para diminuir a altura do rodapé */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* Remova ou comente as estilizações da imagem logo-rodape */
+footer .logo-footer {
+    /* max-width: 500px; */
+    /* height: auto; */
+    /* vertical-align: middle; */
+    margin-right: 0.5em;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 1024px) {
+    .card {
+        flex: 1 1 calc(45% - 2em);
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 100%;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .contact-container p {
+        text-align: center;
+    }
+}
+
+/* Ajuste para telas maiores */
+@media (min-width: 769px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+/* Estilização da seção História */
+#historia p {
+    text-align: justify;
+    text-align-last: center;
+    margin: 0 auto;
+    max-width: 800px; /* Ajuste conforme necessário */
+}
+/* Estilização do aviso na seção de serviços */
+.aviso {
+    background-color: #e300ff; /* Cor de fundo original */
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.aviso-titulo {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #fff; /* Cor do texto branca */
+}
+
+.aviso-texto {
+    font-size: 1em;
+    color: #fff; /* Cor do texto branca */
+    line-height: 1.6;
+    text-align: justify;
+    text-align-last: center;
+}
+/* Estilização dos cards de serviços */
+#servicos .card {
+    flex: 0 0 auto;
+    width: 300px;
+    margin: 1em; /* Adicione margem para espaçamento */
+    height: 100%; /* Garanta que todos os cards de serviços tenham a mesma altura */
+}
+
+#servicos .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* Estilização das imagens */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#historia p {
+    text-align: justify;
+    text-align-last: center;
+    margin: 0 auto;
+    max-width: 800px; /* Ajuste conforme necessário */
+}
