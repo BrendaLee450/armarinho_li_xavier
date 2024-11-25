@@ -160,6 +160,15 @@ h1, h2, h3 {
     color: #e300ff; /* Cor dos ícones igual ao fundo dos avisos */
 }
 
+.contact-container a {
+    color: inherit; /* Mantém a cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+.contact-container a:hover {
+    color: #e300ff; /* Cor dos ícones igual ao fundo dos avisos */
+    text-decoration: none; /* Remove o sublinhado ao passar o mouse */
+}
 /* Estilização do rodapé */
 footer {
     background-color: #6f30e8;/* Cor de fundo do rodapé */
