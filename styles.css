@@ -201,15 +201,32 @@ footer .logo-footer {
 
 @media (max-width: 768px) {
     .card {
-        flex: 1 1 100%;
+        flex: 0 0 100%; /* Um card por vez em telas pequenas */
+        margin: 0.5em auto; /* Centraliza o card */
     }
 
-    .container {
-        padding: 0 15px;
+    .card-carousel {
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        gap: 1em;
+        padding: 1em 0;
+        flex: 1;
+        scroll-snap-type: x mandatory; /* Adiciona o comportamento de snap */
+        position: relative; /* Adiciona posição relativa para os botões */
+        justify-content: flex-start /* Centraliza os cards na tela */
     }
 
-    .contact-container p {
-        text-align: center;
+    .card-carousel::-webkit-scrollbar {
+        display: none;
+    }
+
+    .carousel-button.prev {
+        left: 5px; /* Ajuste a posição para dentro da área do card em telas pequenas */
+    }
+
+    .carousel-button.next {
+        right: 5px; /* Ajuste a posição para dentro da área do card em telas pequenas */
     }
 }
 
