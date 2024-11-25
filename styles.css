@@ -194,13 +194,13 @@ footer .logo-footer {
 
 /* Ajuste para telas menores */
 @media (max-width: 1024px) {
-    .card {
-        flex: 1 1 calc(45% - 2em);
+    #servicos .card {
+        flex: 1 1 calc(50% - 2em); /* Dois cards por linha em telas médias */
     }
 }
 
 @media (max-width: 768px) {
-    .card {
+    #servicos .card {
         flex: 0 0 100%; /* Um card por vez em telas pequenas */
         margin: 0.5em auto; /* Centraliza o card */
     }
@@ -214,7 +214,7 @@ footer .logo-footer {
         flex: 1;
         scroll-snap-type: x mandatory; /* Adiciona o comportamento de snap */
         position: relative; /* Adiciona posição relativa para os botões */
-        justify-content: flex-start /* Centraliza os cards na tela */
+        justify-content: flex-start /* Alinha os cards no início */
     }
 
     .card-carousel::-webkit-scrollbar {
@@ -268,17 +268,45 @@ footer .logo-footer {
 }
 /* Estilização dos cards de serviços */
 #servicos .card {
+    display: flex;
+    flex-direction: column;
     flex: 0 0 auto;
-    width: 300px;
-    margin: 1em; /* Adicione margem para espaçamento */
-    height: 100%; /* Garanta que todos os cards de serviços tenham a mesma altura */
+    width: 300px; /* Defina uma largura fixa para todos os cards */
+    max-width: 100%; /* Garante que o card ocupe toda a largura disponível em telas menores */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+    margin: 1em auto; /* Centraliza os cards e adiciona margem para espaçamento */
+    box-sizing: border-box; /* Inclui padding e border no tamanho total do elemento */
+    overflow: hidden; /* Garante que o texto não saia dos limites do card */
+    scroll-snap-align: start; /* Adiciona o comportamento de snap */
+    height: auto; /* Ajusta a altura automaticamente */
 }
+
 
 #servicos .card-body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+}
+
+#servicos .card img {
+    max-width: 100%;
+    height: auto; /* Ajusta a altura automaticamente */
+    object-fit: cover; /* Garanta que a imagem se ajuste ao contêiner */
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+#servicos .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-color: #e300ff;
 }
 
 /* Estilização das imagens */
