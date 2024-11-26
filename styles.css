@@ -36,7 +36,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 1em;
+    margin: 0 0.5em;
 }
 
 nav ul li a {
@@ -202,7 +202,8 @@ footer .logo-footer {
 @media (max-width: 768px) {
     #servicos .card {
         flex: 0 0 100%; /* Um card por vez em telas pequenas */
-        margin: 0.5em auto; /* Centraliza o card */
+        max-width: 100%; /* Garante que o card ocupe toda a largura disponível */
+        margin: 0 auto; /* Centraliza o card */
     }
 
     .card-carousel {
@@ -214,7 +215,7 @@ footer .logo-footer {
         flex: 1;
         scroll-snap-type: x mandatory; /* Adiciona o comportamento de snap */
         position: relative; /* Adiciona posição relativa para os botões */
-        justify-content: flex-start /* Alinha os cards no início */
+        justify-content: center; /* Centraliza os cards na tela */
     }
 
     .card-carousel::-webkit-scrollbar {
@@ -227,6 +228,15 @@ footer .logo-footer {
 
     .carousel-button.next {
         right: 5px; /* Ajuste a posição para dentro da área do card em telas pequenas */
+    }
+
+    nav ul {
+        flex-wrap: nowrap; /* Não permita que os itens quebrem linha */
+        overflow-x: auto; /* Adicione rolagem horizontal se necessário */
+    }
+
+    nav ul li {
+        flex: 0 0 auto; /* Garante que os itens não encolham */
     }
 }
 
