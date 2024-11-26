@@ -153,8 +153,10 @@ h1, h2, h3 {
 
 .contact-container {
     display: flex;
-    justify-content: center;
-    gap: 2em;
+    flex-direction: column; /* Alinha os itens em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    gap: 1em; /* Adicione espaçamento entre os itens */
 }
 
 .contact-icon {
@@ -167,6 +169,7 @@ h1, h2, h3 {
 .contact-container a {
     color: inherit; /* Mantém a cor do texto */
     text-decoration: none; /* Remove o sublinhado */
+    margin: 0.5em 0; /* Adicione margem vertical entre os itens de contato */
 }
 
 .contact-container a:hover {
@@ -242,9 +245,13 @@ footer .logo-footer {
 
 /* Ajuste para telas maiores */
 @media (min-width: 769px) {
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
+    .contact-container {
+        flex-direction: row; /* Alinha os itens em linha para telas maiores */
+        gap: 2em; /* Adicione espaçamento horizontal entre os itens */
+    }
+
+    .contact-container a {
+        margin: 0; /* Remova a margem vertical em telas maiores */
     }
 }
 /* Estilização da seção História */
