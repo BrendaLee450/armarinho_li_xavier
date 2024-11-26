@@ -360,7 +360,10 @@ img {
     color: #e300ff; /* Cor de destaque */
     background-color: #f5f5f5; /* Cor de fundo suave */
     padding: 1em; /* Adicione padding */
-    border-left: 5px solid #6f30e8; /* Adicione uma borda esquerda */
-    margin: 1em 0; /* Adicione margem */
+    margin: 2em 0; /* Adicione margem para afastar do texto da história */
+    margin-top: 3em; /* Aumente a margem superior para afastar do texto de cima */
     text-align: center; /* Centralize o texto */
+    border: 2px solid #6f30e8; /* Adicione uma borda roxa em volta de tudo */
+    border-radius: 10px; /* Adicione bordas arredondadas */
+    font-style: italic; /* Adicione estilo itálico */
 }
