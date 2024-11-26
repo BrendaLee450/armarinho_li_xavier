@@ -193,15 +193,12 @@ footer {
     text-align: center;
     padding: 1em 0; /* Diminua o padding para diminuir a altura do rodapé */
     display: flex;
-    flex-direction: column;
+    flex-wrap: nowrap; /* Não permita que os itens quebrem linha */
     align-items: center;
     justify-content: center;
 }
 /* Remova ou comente as estilizações da imagem logo-rodape */
 footer .logo-footer {
-    /* max-width: 500px; */
-    /* height: auto; */
-    /* vertical-align: middle; */
     margin-right: 0.5em;
 }
 
@@ -250,6 +247,15 @@ footer .logo-footer {
 
     nav ul li {
         flex: 0 0 auto; /* Garante que os itens não encolham */
+    }
+
+    footer {
+        flex-direction: column; /* Alinha os itens em coluna para telas menores */
+        gap: 1em; /* Adicione espaçamento entre os itens */
+    }
+
+    footer .logo-footer {
+        margin-right: 0; /* Remova a margem direita em telas menores */
     }
 }
 
