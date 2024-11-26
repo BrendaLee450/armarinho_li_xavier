@@ -69,6 +69,9 @@ section {
     gap: 1em;
     padding: 1em 0;
     flex: 1;
+    scroll-snap-type: x mandatory; /* Adiciona o comportamento de snap */
+    position: relative; /* Adiciona posição relativa para os botões */
+    justify-content: flex-start; /* Alinha os cards no início */
 }
 
 .card-carousel::-webkit-scrollbar {
@@ -76,8 +79,11 @@ section {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
     flex: 0 0 auto;
-    width: 300px;
+    width: 300px; /* Defina uma largura fixa para todos os cards */
+    max-width: 300px; /* Defina uma largura máxima para todos os cards */
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -86,6 +92,10 @@ section {
     transition: transform 0.2s, box-shadow 0.2s;
     text-align: center;
     margin: 1em; /* Adicione margem para espaçamento */
+    box-sizing: border-box; /* Inclui padding e border no tamanho total do elemento */
+    overflow: hidden; /* Garante que o texto não saia dos limites do card */
+    scroll-snap-align: start; /* Adiciona o comportamento de snap */
+    height: auto; /* Ajusta a altura automaticamente */
 }
 
 .card img {
@@ -218,7 +228,7 @@ footer .logo-footer {
         flex: 1;
         scroll-snap-type: x mandatory; /* Adiciona o comportamento de snap */
         position: relative; /* Adiciona posição relativa para os botões */
-        justify-content: center; /* Centraliza os cards na tela */
+        justify-content: flex-start; /* Alinha os cards no início */
     }
 
     .card-carousel::-webkit-scrollbar {
