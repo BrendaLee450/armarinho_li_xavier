@@ -354,3 +354,13 @@ img {
     margin: 0 auto;
     max-width: 800px; /* Ajuste conforme necessário */
 }
+
+.versiculo {
+    font-size: 1.2em; /* Aumente o tamanho da fonte */
+    color: #e300ff; /* Cor de destaque */
+    background-color: #f5f5f5; /* Cor de fundo suave */
+    padding: 1em; /* Adicione padding */
+    border-left: 5px solid #6f30e8; /* Adicione uma borda esquerda */
+    margin: 1em 0; /* Adicione margem */
+    text-align: center; /* Centralize o texto */
+}
